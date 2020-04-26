@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>  
+</head>
+<body>	
+	<script type="text/javascript">
+		var mail_id = prompt("Enter Email ID of the reciever:");
+		var trans_id = prompt("Enter Your Transaction ID:");
+		var From = prompt("Enter Your Sending Address of Wallet")
+		var today = new Date();
+		var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+		var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+		var dateTime = date+' '+time;
+		Email.send({
+			Host: "smtp.gmail.com",
+			Username : "assetexchangestop@gmail.com",
+			Password : "Testing@1234",
+			To : mail_id,
+			From : "do-not-reply@gmail.com",
+			Subject : "Asset Exchange Stop Transaction Details "+dateTime,
+			Body : 'Transaction Details:<br>'+'Transaction ID: '+trans_id+'<br>From: '+From+'<br>Date: '+date+'<br>Time: '+time+'<br>Team Asset Exchange Stop',
+		})
+		.then(function(message){
+			if(message=='OK'){
+				alert("MAIL SENT")
+				window.close()
+				return
+			}
+			else{
+				alert("MAIL NOT SENT")
+				window.close()
+				return
+			}
+		});
+	</script>
+	<div id="data"></div>
+</body>
+</html>
