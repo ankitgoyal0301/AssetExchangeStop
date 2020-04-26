@@ -35,7 +35,7 @@ Metamask automatically detects network change and site reloads but if you only c
 • Transaction Verification has to be done in 15 minutes.
 • After 15 minutes, only refund can be claimed by the sending user (obviously from the account and network from which he/ she had sent the funds).
 
-![](example.png)
+![](https://github.com/ankitgoyal0301/AssetExchangeStop/blob/master/example.PNG)
 
 ### VERIFICATION PROCESS :
 • Any user can verify both transactions.
